@@ -1,0 +1,260 @@
+* {
+    font-family: 'Super Enjoy', sans-serif;
+}
+
+@font-face {
+    font-family: 'Super Enjoy';
+    src: url('Font/Super\ Enjoy.ttf') format('truetype');
+}
+
+body {
+    background-color: #fdf0d5; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.image-container {
+    display: block;
+    margin: 1px auto 70px;
+    width: 30%;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.image-container:hover {
+    transform: scale(0.9);
+    filter: brightness(1.2);
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-container:hover img {
+}
+
+#select,
+#difficultyForm,
+#Score {
+    color: #003d5b;
+    font-size: 25px;
+    margin-top: 20px;
+    animation: fadeIn 1s ease-in-out; 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+table {
+    border: 7px solid #30638e;
+    margin-top: 20px;
+    border-radius: 10px;
+    color: #d1495b;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    filter: brightness(1.2); 
+    text-shadow: #d1495b;
+}
+
+td {
+    width: 70px;
+    height: 70px;
+    border: 2px solid #00798c;
+    text-align: center;
+    font-size: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+    border-radius: 8px;
+}
+
+td:hover {
+    background-color: #00798c;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    filter: brightness(1.2); /* Add brightness on hover */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    animation: slideIn 1s ease-in-out; 
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+#startButton,
+.strtbtn,
+#okButton {
+    margin-top: 10px;
+    width: fit-content;
+    border: 1px solid #d1495b;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #d1495b;
+    transition: background-color 0.5s, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#startButton:hover,
+.strtbtn:hover,
+#okButton:hover {
+    background: #d1495b;
+    color: #fefae0;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: pulsate 0.5s ease-in-out infinite alternate; 
+}
+
+@keyframes pulsate {
+    to {
+        transform: scale(1.1);
+    }
+}
+
+/*============= POP UP BOX DESIGN =============== */
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+    z-index: 9999; /* ensure it's on top of everything */
+  }
+  
+  .popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #D1495B;
+    padding: 20px;
+    border-radius: 5px;
+    color: #FDF0D5;
+    font-size: 20px;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    
+  }
+  
+  .popup-content button {
+    margin-top: 30px;
+    width: fit-content;
+    border: 1px solid #00798C;
+    background-color: #00798C;
+    padding: 5px 10px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #FDF0D5;
+    transition: background-color 0.5s, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+
+  .popup-content button:hover {
+    background: #00798C;
+    color: #FDF0D5;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: pulsate 0.5s ease-in-out infinite alternate; 
+
+  }
+  
+  #backAi{
+    margin-top: 10px;
+    width: fit-content;
+    border: 1px solid #00798C;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #00798C;
+    transition: background-color 0.5s, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+
+  #backAi:hover {
+    background: #00798C;
+    color: #fefae0;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: pulsate 0.5s ease-in-out infinite alternate; 
+
+  }
+
+  #back{
+    margin-top: 10px;
+    width: fit-content;
+    border: 1px solid #00798C;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #00798C;
+    transition: background-color 0.5s, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+
+  #back:hover {
+    background: #00798C;
+    color: #fefae0;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: pulsate 0.5s ease-in-out infinite alternate; 
+
+  }
+
+  #resetB{
+    margin-left: 25px;
+    margin-top: 10px;
+    width: fit-content;
+    border: 1px solid #00798C;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #00798C;
+    transition: background-color 0.5s, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+
+  #resetB:hover {
+    background: #00798C;
+    color: #fefae0;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: pulsate 0.5s ease-in-out infinite alternate; 
+
+  }
