@@ -44,6 +44,7 @@
                             $_SESSION["users"] = "yes";
                             $_SESSION["sess-playerId"] = $user["player_ID"];
                             header("Location: home.php");
+                            error_reporting(E_ALL &~ E_NOTICE);
                             exit();
                         }  else {
                             echo "<div class = 'alert alert-danger'> Password does not match </div>";
