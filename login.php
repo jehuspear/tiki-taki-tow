@@ -43,7 +43,7 @@
                         if(password_verify($password, $user["Password"])) {
                             $_SESSION["users"] = "yes";
                             $_SESSION["sess-playerId"] = $user["player_ID"];
-                            header("Location: index.php");
+                            header("Location: home.php");
                             die();
                         }  else {
                             echo "<div class = 'alert alert-danger'> Password does not match </div>";
