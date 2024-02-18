@@ -46,8 +46,6 @@ jobs:
     environment:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-    permissions:
-      id-token: write #This is required for requesting the JWT
 
     steps:
       - name: Download artifact from build job
@@ -57,13 +55,6 @@ jobs:
 
       - name: Unzip artifact for deployment
         run: unzip release.zip
-      
-      - name: Login to Azure
-        uses: azure/login@v1
-        with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_A754F20AF3164D65A90941A827606931 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_F53A0D242BAD438F8D24136ECDA177FF }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_CD4A7E23B9BC48599E7905394DDC38BA }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
@@ -71,5 +62,5 @@ jobs:
         with:
           app-name: 'tiki-taki-tow'
           slot-name: 'Production'
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_07A030CC219B4EE58AA0BE15412808F2 }}
           package: .
-          
