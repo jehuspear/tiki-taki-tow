@@ -68,7 +68,7 @@ function makeMove(cell) {
         displayPlayerTurn();
         if (p1score > 4) {
           setTimeout(function() {
-            openPopup("Player 1 (X) Wins The Round!", function() {
+            openPopup("Player 1 (X) Wins The Game!", function() {
               setTimeout(function(){location.reload();},200);
             });
         }, 200);
