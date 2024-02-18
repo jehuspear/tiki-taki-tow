@@ -1,6 +1,6 @@
 <?php
 
-    $hostName = "localhost";
+    $hostName = "tiki-taki-tow-server.mysql.database.azure.com";
     $dbUser = "tikitakitowadmin123";
     $dbPassword = "WebProg_2023";
     $dbName = "tiki_taki_tow_db";
