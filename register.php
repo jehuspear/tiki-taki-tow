@@ -84,7 +84,7 @@
                         mysqli_stmt_execute($stmt);
                         echo "<div class='d-flex justify-content-center alert alert-success'> You are Registered Successfully! </div>";
                     } else {
-                        dir("Something went wrong");
+                        die("Something went wrong");
                     }
                 }
        }         
