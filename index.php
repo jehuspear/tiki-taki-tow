@@ -30,7 +30,11 @@
   <title>Tiki Taki Tow</title>
 </head>
 <body>
-
+    
+<video autoplay muted loop id="video-bg">
+        <source src="Video/Background.mp4" type="video/mp4">
+</video>
+    
 <div class="image-container" onclick="location.reload()" title="Homepage" style="cursor:pointer" draggable="false">
     <img src="images/TTTLogo.png" id="logo" draggable="false">
 </div>
