@@ -1,12 +1,14 @@
 <?php
     session_start();
+    require_once "database.php"; //CONNECTION IN DATABASE
     if(!isset($_SESSION["users"]))
     {
         // header("Location: welcome.php");
         $userName = "Guest";
+        $loginPlayerId = "NULL";
 
     }else{
-      require_once "database.php";
+      // require_once "database.php";
       // get session variables
       $loginPlayerId = $_SESSION["sess-playerId"];  
   
@@ -67,6 +69,16 @@
   <title>Tiki Taki Tow</title>
 </head>
 <body>
+  
+<!-- View in Cosole the PHP Session Variables -->
+<script>
+  var userName = "<?php echo $userName; ?>";
+  var playerID = "<?php echo $loginPlayerId; ?>";
+
+  // Now you can use these JavaScript variables in your JavaScript code
+  console.log("Player ID is " + playerID);
+  console.log("Player Name is " + userName);
+</script>
 
 <!-- THE NAVIGATION BAR  SIDE -->
 <nav class="navbar navbar-expand-lg fixed-top" style="background: #1d2d44; color: #f0ebd8; ">

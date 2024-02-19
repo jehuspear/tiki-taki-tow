@@ -1,6 +1,7 @@
 <?php
     session_start();
-
+    require_once "database.php"; // Include your database connection script
+    
     // Retrieve data from the POST request
     $player_ID = $_POST['player_ID'];
     $playerName = $_POST['playerName'];
@@ -16,7 +17,7 @@
     $score = "$playerScore - $opponentScore";
 
     // Insert data into the database
-    require_once "database.php"; // Include your database connection script
+    
     
     // Define the SQL query
     $sql = "INSERT INTO scoreboard_ai_tbl (player_ID, Username, Opponent_Name, Match_Date, Score, Winner_Name) VALUES (?, ?, ?, ?, ?, ?)";
