@@ -311,10 +311,6 @@ form {
     color: #00798C; /* Highlight color for labels on focus or when input is not empty */
 }
 
-.form-control::placeholder {
-    color: #888; /* Placeholder text color */
-}
-
 .btn {
     background-color: #d1495b;
     color: #fff;
