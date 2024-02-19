@@ -110,9 +110,9 @@
 <br><br><br><br>
 
 <!-- LOGO PIC -->
-<div class="image-container" onclick="location.reload()" title="Homepage" style="cursor:pointer" draggable="false">
+<!-- <div class="image-container" onclick="location.reload()" title="Homepage" style="cursor:pointer" draggable="false">
     <img src="images/TTTLogo.png" id="logo" draggable="false">
-</div>
+</div> -->
 
 <!-- SHOW SCOREBOARD HERE -->
 <h2>Game Results</h2>
