@@ -4,6 +4,7 @@
     {
         // header("Location: welcome.php");
         $userName = "Guest";
+        $loginPlayerId = "NULL";
 
     }else{
       require_once "database.php";
