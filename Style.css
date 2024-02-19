@@ -30,9 +30,18 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
-    position: relative; /* Ensure proper z-index stacking */
-    z-index: -1; /* Place the background behind other content */
 }
+
+/* VIDEO BACKGROUND */
+/* Set video to fill the entire viewport */
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1; /* Ensure the video is behind all other content */
+  }
 .image-container {
     display: block;
     margin: 1px auto 70px;
