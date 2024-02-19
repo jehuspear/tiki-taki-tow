@@ -6,6 +6,10 @@ let p2score = 0;
 let aiscore = 0;
 let drawscore = 0;
 
+// Declare Computer AI selectedDifficulty variable globally
+var selectedDifficulty;
+var opponent_Name;
+
 // GETTING THE PHP SESSION VARIABLES AND PUTTING IT ON JAVASCRIPT VARIABLE
 // Accessing the hidden input field values
 var userName = document.getElementById("userName").value;
@@ -66,6 +70,9 @@ function okGame() {
 
 function startGame() {
   var difficultyRadio = document.querySelector('input[name="difficulty"]:checked');
+  // Use the selected difficulty value as needed
+  selectedDifficulty = difficultyRadio.value;
+
   if (difficultyRadio) {
     document.getElementById("difficultyForm").style.display = "none";
     document.getElementById("ticTacToeGrid").style.display = "table";
@@ -90,6 +97,9 @@ function makeMove(cell) {
   if (cell.innerHTML === '') {
     if (currentPlayer === 'player') {
       cell.innerHTML = 'X';
+      // Use the selected difficulty value as needed
+      opponent_Name = "Computer AI: "+ selectedDifficulty;
+      // console.log("Selected difficulty:", opponent_Name); //Check Opponent Name via Console
 
       if(isMusicOn == true){
         playerplace.play();
@@ -101,6 +111,11 @@ function makeMove(cell) {
         document.getElementById("rounds").innerHTML = `Rounds No: ${roundadd}`;
         displayPlayerTurn();
         if (p1score > 4) {
+          // AFTER WIN RECORD THE GAME RESULT IN TO THE DATABASE
+          recordGameResult(playerID, userName, opponent_Name, p1score, aiscore, userName);
+          console.log(playerID, userName, opponent_Name, p1score, aiscore, userName)
+
+          // ADD MUSIC
           if(isMusicOn == true){
             winRound.play();
           }
@@ -186,6 +201,11 @@ function checkWinAi() {
     document.getElementById("scores").innerHTML = `X - ${p1score} | O - ${scoreadd} | Draw - ${drawscore}`;
     displayPlayerTurn();
     if (aiscore > 4) {
+      // AFTER WIN RECORD THE GAME RESULT IN TO THE DATABASE
+      recordGameResult(playerID, userName, opponent_Name, p1score, aiscore, userName);
+      console.log(playerID, userName, opponent_Name, p1score, aiscore, userName)
+
+      // ADD MUSIC
       if(isMusicOn == true){
         lose.play();
       }
@@ -722,4 +742,32 @@ function goHome() {
   formElement.reset();
 
   resetScore();
+}
+
+// AJAX FUNCTION THAT RECORD THE GAME RESULT IN TO MYSQL DATABASE (PHP)
+function recordGameResult(player_ID, playerName, opponentName, playerScore, opponentScore, winnerName) {
+  // Create an object with the data to send
+  var data = {
+      player_ID: player_ID,
+      playerName: playerName,
+      opponentName: opponentName,
+      playerScore: playerScore,
+      opponentScore: opponentScore,
+      winnerName: winnerName
+  };
+
+  // Send the data to the PHP script using AJAX
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', 'record_game_result.php', true);
+  xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+  xhr.onreadystatechange = function() {
+      if (xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
+          console.log(xhr.responseText);
+          // Handle response from PHP if needed
+          // For example, display a success message or handle errors
+      }
+  }
+  // Convert data object to a query string
+  var queryString = Object.keys(data).map(key => key + '=' + encodeURIComponent(data[key])).join('&');
+  xhr.send(queryString);
 }

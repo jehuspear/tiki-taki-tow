@@ -24,9 +24,9 @@
       $firstName = $playerDetails["First_Name"];
     }
 
- 
-
-    
+    // Retrieve game results from the database, limiting to 10 rows and sorting by datetime in descending order
+    $queryGetGameResults = "SELECT * FROM scoreboard_ai_tbl ORDER BY Match_Date DESC LIMIT 10";
+    $gameResults = mysqli_query($conn, $queryGetGameResults);
 ?>
 
 <!DOCTYPE html>
@@ -44,9 +44,7 @@
   <!-- BOOTSTRAP -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybB5IXNxFwWQfE7u8Lj+XJHAxKlXiG/8rsrtpb6PEdzD828Ii" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
-
+  
   
   <!-- EXTERNAL CSS -->
   <link href="Style.css" rel="stylesheet" type="text/css" /> 
@@ -118,21 +116,20 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>2024-02-19 15:00</td>
-      <td>Player 1</td>
-      <td>Opponent 1</td>
-      <td>3-2</td>
-      <td>Player 1</td>
-    </tr>
-    <tr>
-      <td>2024-02-20 14:30</td>
-      <td>Player 2</td>
-      <td>Opponent 2</td>
-      <td>1-2</td>
-      <td>Opponent 2</td>
-    </tr>
-    <!-- Add more rows as needed -->
+  <?php
+
+      // Iterate over the retrieved game results and display them in the table
+      while ($row = mysqli_fetch_assoc($gameResults)) {
+          echo "<tr>";
+          echo "<td>" . $row['Match_Date'] . "</td>";
+          echo "<td>" . $row['Username'] . "</td>";
+          echo "<td>" . $row['Opponent_Name'] . "</td>";
+          echo "<td>" . $row['Score'] . "</td>";
+          echo "<td>" . $row['Winner_Name'] . "</td>";
+          echo "</tr>";
+      }
+
+    ?>
   </tbody>
 </table>
 
@@ -149,5 +146,10 @@
   <!-- End of Footer -->
 
 
+
+  <!-- <script src="javascript.js"></script> -->
+
 </body>
 </html>
+
+
