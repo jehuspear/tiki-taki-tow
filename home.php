@@ -13,9 +13,6 @@
       // Getting the Player Information at the Database
       $queryGetUser = "SELECT * FROM players_info_tbl WHERE player_ID = '$loginPlayerId' ";
   
-      // $runQuery = mysqli_query($con, $queryGetUser);
-      // $arrayUserDetails = mysqli_fetch_assoc($runQuery);
-  
       $result = mysqli_query($conn, $queryGetUser);
       $playerDetails = mysqli_fetch_array($result, MYSQLI_ASSOC);
   
