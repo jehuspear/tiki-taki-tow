@@ -99,7 +99,7 @@ function makeMove(cell) {
       cell.innerHTML = 'X';
       // Use the selected difficulty value as needed
       opponent_Name = "Computer AI: "+ selectedDifficulty;
-      // console.log("Selected difficulty:", opponent_Name); //Check Opponent Name via Console
+      console.log("Selected difficulty:", opponent_Name); //Check Opponent Name via Console
 
       if(isMusicOn == true){
         playerplace.play();
@@ -113,7 +113,7 @@ function makeMove(cell) {
         if (p1score > 4) {
           // AFTER WIN RECORD THE GAME RESULT IN TO THE DATABASE
           recordGameResult(playerID, userName, opponent_Name, p1score, aiscore, userName);
-          console.log(playerID, userName, opponent_Name, p1score, aiscore, userName)
+          console.log(playerID, userName, opponent_Name, p1score, aiscore, userName);
 
           // ADD MUSIC
           if(isMusicOn == true){
@@ -202,8 +202,8 @@ function checkWinAi() {
     displayPlayerTurn();
     if (aiscore > 4) {
       // AFTER WIN RECORD THE GAME RESULT IN TO THE DATABASE
-      recordGameResult(playerID, userName, opponent_Name, p1score, aiscore, userName);
-      console.log(playerID, userName, opponent_Name, p1score, aiscore, userName)
+      recordGameResult(playerID, userName, opponent_Name, p1score, aiscore, opponent_Name);
+      console.log(playerID, userName, opponent_Name, p1score, aiscore, opponent_Name);
 
       // ADD MUSIC
       if(isMusicOn == true){
