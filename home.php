@@ -112,13 +112,13 @@
   <form id="difficultyForm" style="display: none;">
     <h2>Select AI Difficulty</h2>
     <label>
-      <input type="radio" name="difficulty" value="easy"> Easy
+      <input type="radio" name="difficulty" value="Easy"> Easy
     </label>
     <label>
-      <input type="radio" name="difficulty" value="medium"> Difficult
+      <input type="radio" name="difficulty" value="Difficult"> Difficult
     </label>
     <label>
-      <input type="radio" name="difficulty" value="difficult"> Expert
+      <input type="radio" name="difficulty" value="Expert"> Expert
     </label>
     <button type="button" id="startButton" onclick="startGame()" class="strtbtn">Start Game</button>
   </form>

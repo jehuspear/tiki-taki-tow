@@ -475,15 +475,15 @@ function checkDraw() {
 }
 
 function makeAiMove() {
-  if (document.querySelector('input[value="easy"]:checked')) {
+  if (document.querySelector('input[value="Easy"]:checked')) {
     displayPlayerTurn();
     setTimeout(function() {
     makeRandomMove();
   }, 60);
-  } else if (document.querySelector('input[value="medium"]:checked')) {
+  } else if (document.querySelector('input[value="Difficult"]:checked')) {
     displayPlayerTurn();
     makeMediumMove();
-  } else if (document.querySelector('input[value="difficult"]:checked')) {
+  } else if (document.querySelector('input[value="Expert"]:checked')) {
     displayPlayerTurn();
     makeHardMove();
   }
