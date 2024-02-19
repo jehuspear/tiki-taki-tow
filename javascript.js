@@ -707,5 +707,5 @@ function goHome() {
   var formElement = document.getElementById("select");
   formElement.reset();
 
-  resetBoard();
+  resetScore();
 }
