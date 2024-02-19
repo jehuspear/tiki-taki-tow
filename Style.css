@@ -293,16 +293,16 @@ form {
     width: 100%;
     padding: 12px;
     border: none;
-    border-bottom: 2px solid #d1495b; /* Underline effect for form fields */
+    border-bottom: 2px solid #d1495b; 
     background-color: transparent;
-    transition: border-bottom-color 0.3s;
-    color: #fff; /* Text color for form fields */
+    transition: border-bottom-color 0.3s, color 0.3s; 
+    color: #000; 
     font-size: 16px;
 }
-
 .form-control:focus {
     outline: none;
-    border-bottom-color: #00798C; /* Highlight color for the underline effect on focus */
+    border-bottom-color: #00798C; 
+    color: #000; 
 }
 
 .form-group label {
@@ -310,7 +310,7 @@ form {
     top: 0;
     left: 0;
     font-size: 16px;
-    color: #d1495b; /* Label text color */
+    color: #d1495b; 
     pointer-events: none;
     transition: top 0.3s, font-size 0.3s, color 0.3s;
 }
@@ -319,6 +319,7 @@ form {
 .form-control:not(:placeholder-shown) + label {
     top: -25px;
     font-size: 14px;
+        color: #00798C; 
 }
 
 .btn {
