@@ -281,15 +281,6 @@ input[type="text"], input[type="password"] {
     border-radius: 5px;
 }
 
-.btn {
-    background-color: #d1495b;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
 @keyframes fadeInForm {
     from {
         opacity: 0;
