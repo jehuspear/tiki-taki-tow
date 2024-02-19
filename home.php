@@ -80,7 +80,7 @@
 
               <!-- VIEW SCOREBOARD BUTTON -->
             <div class="text-left" style="padding: 10px; margin-bottom: 10px;">
-                  <a class="btn strtbtn" href="scoreboard.php" target="_blank" style="color: #f0ebd8; font-size:30px;" >
+                  <a class="btn strtbtn" href="scoreboard.php" target="_self" style="color: #f0ebd8; font-size:30px;" >
                   View Scoreboard
                   </a>
             </div>   
@@ -113,7 +113,7 @@
 
 
 <!-- LOGO PIC -->
-<div class="image-container" onclick="location.reload()" title="Homepage" style="cursor:pointer" draggable="false">
+<div class="image-container" onclick="goHome()" title="Homepage" style="cursor:pointer" draggable="false">
     <img src="images/TTTLogo.png" id="logo" draggable="false">
 </div>
 
