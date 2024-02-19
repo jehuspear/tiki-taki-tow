@@ -301,7 +301,6 @@ form {
 .form-control:focus {
     outline: none;
     border-bottom-color: #D1495B; 
-    color: #000; 
 }
 
 .form-group label {
