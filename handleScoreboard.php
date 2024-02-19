@@ -38,10 +38,10 @@
     // Putting the last value of the match_history_ID into a variable and then increment it.
     $old_match_history_ID = $match_Details["match_history_ID"];
     $Username = $match_Details["Username"];
-    echo "OLD ID: " + $old_match_history_ID;
+    echo $old_match_history_ID;
  
     $new_match_history_ID = $old_match_history_ID + 1;
-    echo "NEW ID: " + $new_match_history_ID;
+    echo $new_match_history_ID;
     // Insert data into the database
     
     // Define the SQL query
