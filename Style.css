@@ -272,3 +272,70 @@ form {
     animation: pulsate 0.5s ease-in-out infinite alternate; 
 
   }
+
+.form-group {
+    position: relative;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff; /* Background color for form fields */
+}
+
+.form-group label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 14px;
+    color: #555; /* Label text color */
+    transition: top 0.3s, left 0.3s, font-size 0.3s;
+    pointer-events: none;
+}
+
+.form-control:focus + label,
+.form-control:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 5px;
+    font-size: 12px;
+    color: #d1495b; /* Highlight color for labels on focus or when input is not empty */
+}
+
+.form-control::placeholder {
+    color: #888; /* Placeholder text color */
+}
+
+@keyframes slideInForm {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+form {
+    animation: slideInForm 1s ease-in-out;
+}
+
+.btn {
+    background-color: #d1495b;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #c03849;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: pulsate 0.5s ease-in-out infinite alternate;
+}
