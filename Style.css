@@ -360,6 +360,13 @@ form {
 }
 
 #group {
+    position: fixed;
     bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     color: #30638e;
-} 
+    padding: 10px; /* Optional: Add some padding */
+    width: 100%; /* Optional: Set width to full */
+    text-align: center; /* Optional: Center the text */
+    z-index: 999; /* Optional: Ensure it's on top of other elements */
+}
