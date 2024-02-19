@@ -6,6 +6,15 @@ let p2score = 0;
 let aiscore = 0;
 let drawscore = 0;
 
+// GETTING THE PHP SESSION VARIABLES AND PUTTING IT ON JAVASCRIPT VARIABLE
+// Accessing the hidden input field values
+var userName = document.getElementById("userName").value;
+var playerID = document.getElementById("playerID").value;
+
+// Now you can use these JavaScript variables in your JavaScript code
+console.log("Player ID is " + playerID);
+console.log("Player Name is " + userName);
+
 hideBoard();
 
 function okGame() {

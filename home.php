@@ -174,6 +174,12 @@
     </div>
   </footer>
   <!-- End of Footer -->
+
+  <!-- Hidden input fields to store PHP session variables -->
+<input type="hidden" id="userName" value="<?php echo $userName; ?>">
+<input type="hidden" id="playerID" value="<?php echo $loginPlayerId; ?>">
+
+<!-- EXTERNAL JAVASCRIPT -->
 <script src="javascript.js"></script>
 </body>
 </html>
