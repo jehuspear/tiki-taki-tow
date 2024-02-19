@@ -6,13 +6,33 @@ let p2score = 0;
 let aiscore = 0;
 let drawscore = 0;
 
+var winRound = new Audio('music/win.mp3');
+var playerplace = new Audio('music/place.mp3');
+var opponentplace = new Audio('music/opponent_place.mp3');
+var lose = new Audio('music/lose.mp3');
+var bg = new Audio('music/background.mp3')
+bg.volume = 0.2;
+
 hideBoard();
+
+var isMusicOn = false;
+var musicElement = document.getElementById("music");
+
+function music() {
+    isMusicOn = !isMusicOn;
+
+    if (isMusicOn) {
+        musicElement.innerHTML = "Music On";
+        bg.play();
+    } else {
+        musicElement.innerHTML = "Music Off";
+        bg.pause();
+    }
+}
 
 function okGame() {
   var opponentRadio = document.querySelector('input[name="opponent"]:checked');
   if (document.querySelector('input[value="player"]:checked')) {
-    currentPlayer = 'player';
-    opponentRadio.value = 'player2';
     document.getElementById("select").style.display = "none";
     document.getElementById("ticTacToeGrid").style.display = "table";
     document.getElementById("back").style.display = "inline-block";
@@ -24,10 +44,10 @@ function okGame() {
   } else if (document.querySelector('input[value="ai"]:checked')) {
     isAiGame = true;
     opponentRadio.value = 'ai';
+    document.getElementById("group").style.display = "none";
     document.getElementById("select").style.display = "none";
     document.getElementById("difficultyForm").style.display = "flex";
     document.getElementById("back").style.display = "inline-block";
-    document.getElementById("group").style.display = "none";
   } else {
     // alert("Please select an opponent before starting the game.");
     openPopup("Please select an opponent before starting the game.");
@@ -60,6 +80,10 @@ function makeMove(cell) {
   if (cell.innerHTML === '') {
     if (currentPlayer === 'player') {
       cell.innerHTML = 'X';
+
+      if(isMusicOn == true){
+        playerplace.play();
+      }
       if (checkWin('X')) {
         const scoreadd = ++p1score;
         const roundadd = ++round;
@@ -67,21 +91,23 @@ function makeMove(cell) {
         document.getElementById("rounds").innerHTML = `Rounds No: ${roundadd}`;
         displayPlayerTurn();
         if (p1score > 4) {
+          if(isMusicOn == true){
+            winRound.play();
+          }
           setTimeout(function() {
             openPopup("Player 1 (X) Wins The Game!", function() {
-              setTimeout(function(){location.reload();},200);
+              setTimeout(function(){
+                location.reload();
+              },200);
             });
         }, 200);
       } else if (p1score < 5) {
           openPopup("Player 1 (X) Wins The Round!", function() {
-            // Code to execute after pop-up is closed
             setTimeout(function() {resetBoard();}, 200);
           });
       }
       } else if (checkDraw()) {
-        // alert("We have a draw!");
           openPopup("WE HAVE A DRAW!", function(){
-            // Code to execute after pop-up is closed
             setTimeout(function() {resetBoard();}, 200);
           });
       } else {
@@ -94,7 +120,9 @@ function makeMove(cell) {
       }
     } else if (currentPlayer === 'player2') {
       cell.innerHTML = 'O';
-      cell.innerHTML = 'O';
+      if(isMusicOn == true){
+        opponentplace.play();
+      }
       if (checkWin('O')) {
         const scoreadd = ++p2score;
         const roundadd = ++round;
@@ -102,8 +130,11 @@ function makeMove(cell) {
         document.getElementById("rounds").innerHTML = `Rounds No: ${roundadd}`;
         displayPlayerTurn();
         if (p2score > 4) {
+          if(isMusicOn == true){
+            winRound.play();
+          }
           setTimeout(function() {
-            openPopup("Player 2 (O) Wins The Round!", function() {
+            openPopup("Player 2 (O) Wins The Game!", function() {
               // Code to execute after pop-up is closed
               setTimeout(function(){location.reload();},200);
             });
@@ -143,6 +174,9 @@ function checkWinAi() {
     document.getElementById("scores").innerHTML = `X - ${p1score} | O - ${scoreadd} | Draw - ${drawscore}`;
     displayPlayerTurn();
     if (aiscore > 4) {
+      if(isMusicOn == true){
+        lose.play();
+      }
       setTimeout(function() {
         openPopup("COMPUTER AI (O) Wins The Game!", function() {
           setTimeout(function() {location.reload();},200);
@@ -647,4 +681,31 @@ function closePopup() {
     popupCallback();
     popupCallback = null; // Reset callback to avoid memory leaks
   }
+}
+
+function goHome() {
+  document.getElementById("select").style.display = "flex";
+  document.getElementById("ticTacToeGrid").style.display = "none";
+  document.getElementById("rounds").style.display = "none";
+  document.getElementById("difficultyForm").style.display = "none";
+
+
+  document.getElementById("scores").style.display = "none";
+  document.getElementById("rounds").style.display = "none";
+
+
+  document.getElementById("backAi").style.display = "none";
+  document.getElementById("resetB").style.display = "none";
+  document.getElementById("group").style.display = "flex";
+  document.getElementById("back").style.display = "none";
+  document.getElementById("playerTurn").style.display = "none";
+
+  var imageContainer = document.getElementsByClassName("image-container")[0];
+  imageContainer.style.marginBottom = "";
+  imageContainer.style.width = "";
+
+  var formElement = document.getElementById("select");
+  formElement.reset();
+
+  resetBoard();
 }
