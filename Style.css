@@ -266,16 +266,16 @@ form {
     margin-left: 25px;
     margin-top: 10px;
     width: fit-content;
-    border: 1px solid #00798C;
+    border: 1px solid #D1495B;
     padding: 10px 20px;
     border-radius: 50px;
     text-decoration: none;
-    color: #00798C;
+    color: #D1495B;
     transition: background-color 0.5s, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   }
 
   #resetB:hover {
-    background: #00798C;
+    background: #D1495B;
     color: #fefae0;
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -300,7 +300,7 @@ form {
 }
 .form-control:focus {
     outline: none;
-    border-bottom-color: #00798C; 
+    border-bottom-color: #D1495B; 
     color: #000; 
 }
 
