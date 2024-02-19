@@ -359,4 +359,9 @@ form {
     animation: slideInForm 1s ease-in-out;
 }
 
-
+.mechanics-section h5 {
+    color: #00798C;
+    font-size: 25px;
+    margin-top: 20px;
+    animation: fadeIn 1s ease-in-out; 
+}
