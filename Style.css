@@ -288,6 +288,7 @@ form {
 .form-group {
     position: relative;
     margin-bottom: 25px;
+    border-radius: 50%;
 }
 
 .form-control {
@@ -358,4 +359,6 @@ form {
     animation: slideInForm 1s ease-in-out;
 }
 
-
+.mechanics-section h5 {
+    color: #30638e;
+}
