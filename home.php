@@ -33,7 +33,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="images/logo-tab.png">
-  
+  <script>
+    function redirectToAnotherTab() {
+      // Replace 'https://example.com' with the URL you want to redirect to
+      var newTabUrl = 'https://tiki-taki-tow.azurewebsites.net/index.php';
+
+      // Open a new tab with the specified URL
+      window.open(newTabUrl, '_blank');
+    }
+  </script>
+</head>
+<body>
+  <!-- Your existing HTML content -->
+
+  <!-- Add a button or trigger to initiate the redirection -->
+  <button onclick="redirectToAnotherTab()">Redirect to Another Tab</button>
+
+  <!-- Add more content as needed -->
+</body>
+</html>
   <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
