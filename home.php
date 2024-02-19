@@ -79,6 +79,7 @@
                         Hello, <?php echo $userName?>
                         </a>
                         <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" id="music" onclick="music()">Music Off</a></li>
                             <li><a class="dropdown-item" href="logout.php">LOG OUT</a></li>
                         </ul>
                     </li>
@@ -163,7 +164,7 @@
   <div id="Score">
     <h4 style= "text-align: center" id="rounds">Round No:</h4>
     <button style="display: none;" id="backAi" onclick="showAiBoard()">Back</button>
-    <button style="display: none;" id="back" onclick="location.reload()">Back</button>
+    <button style="display: none;" id="back" onclick="goHome()">Back</button>
     <button style="display: none;" id="resetB" onclick="resetScore()">Restart</button>
   </div>
 
