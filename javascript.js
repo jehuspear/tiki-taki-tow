@@ -758,7 +758,7 @@ function recordGameResult(player_ID, playerName, opponentName, playerScore, oppo
 
   // Send the data to the PHP script using AJAX
   var xhr = new XMLHttpRequest();
-  xhr.open('POST', 'record_game_result.php', true);
+  xhr.open('POST', 'handleScoreboard.php', true);
   xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
   xhr.onreadystatechange = function() {
       if (xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
