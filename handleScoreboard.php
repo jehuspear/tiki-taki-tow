@@ -1,4 +1,6 @@
 <?php
+    session_start();
+    
     // Retrieve data from the POST request
     $player_ID = $_POST['player_ID'];
     $playerName = $_POST['playerName'];
