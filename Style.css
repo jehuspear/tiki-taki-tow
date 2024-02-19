@@ -7,7 +7,22 @@
     src: url('Font/Super\ Enjoy.ttf') format('truetype');
 }
 
+@keyframes loop-video {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 100%;
+    }
+}
+
 body {
+    background: url('path_to_your_video_file.mp4') no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    animation: loop-video 10s linear infinite;
     background-color: #fdf0d5; 
     display: flex;
     flex-direction: column;
@@ -17,6 +32,16 @@ body {
     margin: 0;
 }
 
+/* VIDEO BACKGROUND */
+/* Set video to fill the entire viewport */
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1; /* Ensure the video is behind all other content */
+  }
 .image-container {
     display: block;
     margin: 1px auto 70px;
@@ -100,7 +125,7 @@ form {
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
-    animation: slideIn 1s ease-in-out; 
+    animation: slideIn 1s ease-in-out;
 }
 
 @keyframes slideIn {
@@ -201,16 +226,16 @@ form {
   #backAi{
     margin-top: 10px;
     width: fit-content;
-    border: 1px solid #00798C;
+    border: 1px solid #D1495B;
     padding: 10px 20px;
     border-radius: 50px;
     text-decoration: none;
-    color: #00798C;
+    color: #D1495B;
     transition: background-color 0.5s, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   }
 
   #backAi:hover {
-    background: #00798C;
+    background: #D1495B;
     color: #fefae0;
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -221,16 +246,15 @@ form {
   #back{
     margin-top: 10px;
     width: fit-content;
-    border: 1px solid #00798C;
+    border: 1px solid #D1495B;
     padding: 10px 20px;
     border-radius: 50px;
     text-decoration: none;
-    color: #00798C;
     transition: background-color 0.5s, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   }
 
   #back:hover {
-    background: #00798C;
+    background: #D1495B;
     color: #fefae0;
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -242,19 +266,95 @@ form {
     margin-left: 25px;
     margin-top: 10px;
     width: fit-content;
-    border: 1px solid #00798C;
+    border: 1px solid #D1495B;
     padding: 10px 20px;
     border-radius: 50px;
     text-decoration: none;
-    color: #00798C;
+    color: #D1495B;
     transition: background-color 0.5s, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   }
 
   #resetB:hover {
-    background: #00798C;
+    background: #D1495B;
     color: #fefae0;
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     animation: pulsate 0.5s ease-in-out infinite alternate; 
 
   }
+
+.form-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-bottom: 2px solid #d1495b; 
+    background-color: transparent;
+    transition: border-bottom-color 0.3s, color 0.3s; 
+    color: #000; 
+    font-size: 16px;
+}
+.form-control:focus {
+    outline: none;
+    border-bottom-color: #D1495B; 
+    color: #000; 
+}
+
+.form-group label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 16px;
+    color: #d1495b; 
+    pointer-events: none;
+    transition: top 0.3s, font-size 0.3s, color 0.3s;
+}
+
+.form-control:focus + label,
+.form-control:not(:placeholder-shown) + label {
+    top: -25px;
+    font-size: 14px;
+        color: #00798C; 
+}
+
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #c03849;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: pulsate 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes pulsate {
+    to {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes slideInForm {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+form {
+    animation: slideInForm 1s ease-in-out;
+}
+
+

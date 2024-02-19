@@ -51,7 +51,10 @@
   <title>Tiki Taki Tow</title>
 </head>
 <body>
-
+<video autoplay muted loop id="video-bg">
+        <source src="Video/Background.mp4" type="video/mp4">
+</video>
+    
 <!-- THE NAVIGATION BAR  SIDE -->
 <nav class="navbar navbar-expand-lg fixed-top" style="background: #1d2d44; color: #f0ebd8; ">
   

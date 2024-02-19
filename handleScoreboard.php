@@ -68,8 +68,19 @@
         echo "<div class='d-flex justify-content-center alert alert-danger'> Error: " . mysqli_error($conn) . "</div>";
     }
 
-    // // Close the statement and database connection
-        mysqli_stmt_close($stmt);
-        mysqli_close($conn);
-    echo "Hello WORLD";
+    // Close the statement and database connection
+    mysqli_stmt_close($stmt);
+    mysqli_close($conn);
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Form</title>
+</head>
+<body>
+    <h1>Sample Form</h1>
+</body>
+</html>
