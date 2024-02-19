@@ -58,12 +58,12 @@
         <form action = "login.php" method = "post">
            
             <div class = "form-group">
-                <label for = "email"> Username: </label>
+                <label for = "email"> Username: </label><p></p>
                 <input type="text" name = "Input_username" class = "form-control" required>
             </div>
  
             <div class = "form-group">
-                <label for = "password"> Password:</label>
+                <label for = "password"> Password:</label><p></p>
                 <input type = "password" name = "Input_password" class = "form-control" required>
             </div>
  
