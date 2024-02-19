@@ -54,14 +54,14 @@
   <!-- INTERNAL CSS -->
   <style>
     table {
-        width: 100%;
-       margin-bottom: 30px;
+      width: 75%;
+      margin-bottom: 30px;
     }
     th, td {
         padding: 8px;
         text-align: center;
         border-bottom: 1px solid #ddd;
-        font-size: 1vw;
+        font-size: 0.8vw;
     }
   
 </style>
@@ -116,41 +116,42 @@
 </div> -->
 
 <!-- SHOW SCOREBOARD HERE -->
+<div class="container">
 <h2>SCOREBOARD:</h2>
 
-<table>
-  <thead>
-    <tr>
-      <th>Newest - Oldest</th>
-      <th>Date and Time</th>
-      <th>Player Name</th>
-      <th>Opponent Name</th>
-      <th>Score</th>
-      <th>Winner</th>
-    </tr>
-  </thead>
-  <tbody>
-  <?php 
+    <table>
+      <thead>
+        <tr>
+          <th>Newest - Oldest</th>
+          <th>Date and Time</th>
+          <th>Player Name</th>
+          <th>Opponent Name</th>
+          <th>Score</th>
+          <th>Winner</th>
+        </tr>
+      </thead>
+      <tbody>
+      <?php 
 
-      $line_counter = 0;
-      // Iterate over the retrieved game results and display them in the table
-      while ($row = mysqli_fetch_assoc($gameResults)) {
-          $line_counter = $line_counter + 1;
+          $line_counter = 0;
+          // Iterate over the retrieved game results and display them in the table
+          while ($row = mysqli_fetch_assoc($gameResults)) {
+              $line_counter = $line_counter + 1;
 
-          echo "<tr>";
-          echo "<td>" . $line_counter . "</td>";
-          echo "<td>" . $row['Match_Date'] . "</td>";
-          echo "<td>" . $row['Username'] . "</td>";
-          echo "<td>" . $row['Opponent_Name'] . "</td>";
-          echo "<td>" . $row['Score'] . "</td>";
-          echo "<td>" . $row['Winner_Name'] . "</td>";
-          echo "</tr>";
-      }
+              echo "<tr>";
+              echo "<td>" . $line_counter . "</td>";
+              echo "<td>" . $row['Match_Date'] . "</td>";
+              echo "<td>" . $row['Username'] . "</td>";
+              echo "<td>" . $row['Opponent_Name'] . "</td>";
+              echo "<td>" . $row['Score'] . "</td>";
+              echo "<td>" . $row['Winner_Name'] . "</td>";
+              echo "</tr>";
+          }
 
-    ?>
-  </tbody>
-</table>
-
+        ?>
+      </tbody>
+    </table>
+</div>
 
 <!-- BACK BUTTON -->
 <div class="d-flex justify-content-center"><a href="home.php" class="btn" id="back">Back</a> </div>
