@@ -135,8 +135,9 @@
       // Iterate over the retrieved game results and display them in the table
       while ($row = mysqli_fetch_assoc($gameResults)) {
           $line_counter = $line_counter + 1;
-          
+
           echo "<tr>";
+          echo "<td>" . $line_counter . "</td>";
           echo "<td>" . $row['Match_Date'] . "</td>";
           echo "<td>" . $row['Username'] . "</td>";
           echo "<td>" . $row['Opponent_Name'] . "</td>";
