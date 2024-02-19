@@ -99,6 +99,7 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="logout.php">LOG OUT</a></li>
+                            <li><a class="dropdown-item" id="music" onclick="music()">Music Off</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -164,7 +165,7 @@
 
 
 
-  <!-- <script src="javascript.js"></script> -->
+  <script src="javascript.js"></script>
 
 </body>
 </html>
