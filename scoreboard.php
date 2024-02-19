@@ -115,7 +115,7 @@
 </div> -->
 
 <!-- SHOW SCOREBOARD HERE -->
-<h2>Game Results</h2>
+<h2>SCOREBOARD:</h2>
 
 <table>
   <thead>
