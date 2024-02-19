@@ -69,7 +69,7 @@
   <title>Tiki Taki Tow</title>
 </head>
 <body>
-  
+
 <!-- View in Cosole the PHP Session Variables -->
 <script>
   var userName = "<?php echo $userName; ?>";
@@ -120,6 +120,7 @@
 <table>
   <thead>
     <tr>
+      <th>Newest - Oldest</th>
       <th>Date and Time</th>
       <th>Player Name</th>
       <th>Opponent Name</th>
@@ -128,10 +129,13 @@
     </tr>
   </thead>
   <tbody>
-  <?php
+  <?php 
 
+      $line_counter = 0;
       // Iterate over the retrieved game results and display them in the table
       while ($row = mysqli_fetch_assoc($gameResults)) {
+          $line_counter = $line_counter + 1;
+          
           echo "<tr>";
           echo "<td>" . $row['Match_Date'] . "</td>";
           echo "<td>" . $row['Username'] . "</td>";
