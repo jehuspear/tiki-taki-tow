@@ -126,6 +126,7 @@ form {
     align-items: center;
     margin-top: 20px;
     animation: slideIn 1s ease-in-out;
+    border-radius: 50%;
 }
 
 @keyframes slideIn {
@@ -272,7 +273,7 @@ form {
     padding: 10px 20px;
     border-radius: 50px;
     text-decoration: none;
-    color: #D1495B;
+    color: #D1495B;  
     transition: background-color 0.5s, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   }
 
