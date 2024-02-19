@@ -7,7 +7,22 @@
     src: url('Font/Super\ Enjoy.ttf') format('truetype');
 }
 
+@keyframes loop-video {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 100%;
+    }
+}
+
 body {
+    background: url('Video/Background.mp4') no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    animation: loop-video 10s linear infinite;
     background-color: #fdf0d5; 
     display: flex;
     flex-direction: column;
@@ -16,7 +31,6 @@ body {
     height: 100vh;
     margin: 0;
 }
-
 .image-container {
     display: block;
     margin: 1px auto 70px;
