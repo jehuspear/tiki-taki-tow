@@ -62,6 +62,7 @@
   <br><br><br>
 
   <!-- GAME MECHANICS -->
+  <div class="mechanics-section">
   <h5 style="text-align: center; margin-top: 20px;">MECHANICS:<br>Players take turns putting their marks in empty squares.<br>The first player to get 3 of her marks in a row<br>(up, down, across, or diagonally) is the winner.</h5>
   
   </div>
