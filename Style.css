@@ -273,3 +273,84 @@ form {
 
   }
 
+.form-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-bottom: 2px solid #d1495b; /* Underline effect for form fields */
+    background-color: transparent;
+    transition: border-bottom-color 0.3s;
+    color: #fff; /* Text color for form fields */
+    font-size: 16px;
+}
+
+.form-control:focus {
+    outline: none;
+    border-bottom-color: #00798C; /* Highlight color for the underline effect on focus */
+}
+
+.form-group label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 16px;
+    color: #d1495b; /* Label text color */
+    pointer-events: none;
+    transition: top 0.3s, font-size 0.3s, color 0.3s;
+}
+
+.form-control:focus + label,
+.form-control:not(:placeholder-shown) + label {
+    top: -25px;
+    font-size: 14px;
+    color: #00798C; /* Highlight color for labels on focus or when input is not empty */
+}
+
+.form-control::placeholder {
+    color: #888; /* Placeholder text color */
+}
+
+.btn {
+    background-color: #d1495b;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #c03849;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: pulsate 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes pulsate {
+    to {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes slideInForm {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+form {
+    animation: slideInForm 1s ease-in-out;
+}
+
+
