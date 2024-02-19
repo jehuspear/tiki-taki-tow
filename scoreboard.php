@@ -116,7 +116,7 @@
 </div> -->
 
 <!-- SHOW SCOREBOARD HERE -->
-<div class="container">
+<div class="h-100 d-flex align-items-center justify-content-center">
 <h2>SCOREBOARD:</h2>
 
     <table>
