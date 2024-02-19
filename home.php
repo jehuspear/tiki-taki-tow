@@ -62,12 +62,21 @@
   
         <div class="container-fluid">
 
+              <!-- VIEW SCOREBOARD BUTTON -->
+            <div class="text-left" style="padding: 10px; margin-bottom: 10px;">
+                  <a class="btn strtbtn" href="scoreboard.php" target="_blank" style="color: #f0ebd8; font-size:30px;" >
+                  View Scoreboard
+                  </a>
+            </div>   
+            
+            <!-- Player/Guest Button -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            
             <div class="collapse navbar-collapse" id="navbarNav" >
                 <ul class="navbar-nav ms-auto" >
-                    
+                
                     <li class="nav-item dropdown" >
                         <a class="nav-link dropdown-toggle" style="color: #f0ebd8; font-size:30px;" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Hello, <?php echo $userName?>
@@ -81,6 +90,7 @@
         </div>
     </nav>
 <!-- END OF NAV BAR -->
+
 
 <br><br><br><br>
 
