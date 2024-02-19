@@ -1,6 +1,6 @@
 <?php
     session_start();
-    
+
     // Retrieve data from the POST request
     $player_ID = $_POST['player_ID'];
     $playerName = $_POST['playerName'];
@@ -46,3 +46,14 @@
     mysqli_stmt_close($stmt);
     mysqli_close($conn);
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
