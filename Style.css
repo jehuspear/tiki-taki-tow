@@ -319,7 +319,6 @@ form {
 .form-control:not(:placeholder-shown) + label {
     top: -25px;
     font-size: 14px;
-    color: #00798C; /* Highlight color for labels on focus or when input is not empty */
 }
 
 .btn {
