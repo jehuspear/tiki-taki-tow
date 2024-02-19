@@ -39,7 +39,7 @@
       var newTabUrl = 'https://tiki-taki-tow.azurewebsites.net/index.php';
 
       // Open a new tab with the specified URL
-      window.open(newTabUrl, 'https://tiki-taki-tow.azurewebsites.net/index.php');
+      window.open(newTabUrl, '_blank');
     }
   </script>
 </head>
