@@ -97,7 +97,7 @@ function makeMove(cell) {
           setTimeout(function() {
             openPopup("Player 1 (X) Wins The Game!", function() {
               setTimeout(function(){
-                location.reload();
+                goHome();
               },200);
             });
         }, 200);
@@ -136,7 +136,9 @@ function makeMove(cell) {
           setTimeout(function() {
             openPopup("Player 2 (O) Wins The Game!", function() {
               // Code to execute after pop-up is closed
-              setTimeout(function(){location.reload();},200);
+              setTimeout(function(){
+                  goHome();
+              },200);
             });
         }, 200);
         } else if (p2score < 5) { 
@@ -179,7 +181,9 @@ function checkWinAi() {
       }
       setTimeout(function() {
         openPopup("COMPUTER AI (O) Wins The Game!", function() {
-          setTimeout(function() {location.reload();},200);
+          setTimeout(function() {
+              goHome();
+          },200);
         });
     }, 200);
 
