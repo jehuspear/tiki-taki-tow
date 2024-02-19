@@ -54,14 +54,18 @@
   <!-- INTERNAL CSS -->
   <style>
     table {
-      width: 75%;
+      width: 90%;
       margin-bottom: 30px;
+      position: relative;
     }
     th, td {
-        padding: 8px;
+        /* padding: 2px; */
         text-align: center;
         border-bottom: 1px solid #ddd;
-        font-size: 0.8vw;
+        font-size: 2vh;
+        width: 100px;
+        height: 40px;
+       
     }
   
 </style>
@@ -116,8 +120,9 @@
 </div> -->
 
 <!-- SHOW SCOREBOARD HERE -->
-<div class="h-100 d-flex align-items-center justify-content-center">
-<h2>SCOREBOARD:</h2>
+
+<h2 style="position: relative; margin-top: 5%;">SCOREBOARD:</h2>
+
 
     <table>
       <thead>
@@ -151,7 +156,7 @@
         ?>
       </tbody>
     </table>
-</div>
+
 
 <!-- BACK BUTTON -->
 <div class="d-flex justify-content-center"><a href="home.php" class="btn" id="back">Back</a> </div>
@@ -163,7 +168,6 @@
     </div>
   </footer>
   <!-- End of Footer -->
-
 
 
   <script src="javascript.js"></script>
