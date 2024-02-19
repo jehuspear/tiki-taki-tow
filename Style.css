@@ -273,7 +273,7 @@ form {
     padding: 10px 20px;
     border-radius: 50px;
     text-decoration: none;
-    color: #D1495B;
+      
     transition: background-color 0.5s, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   }
 
