@@ -27,7 +27,7 @@
     }
 
     // Retrieve game results from the database, limiting to 10 rows and sorting by datetime in descending order
-    $queryGetGameResults = "SELECT * FROM scoreboard_ai_tbl ORDER BY Match_Date DESC LIMIT 10";
+    $queryGetGameResults = "SELECT * FROM tiki_taki_tow_db.scoreboard_ai_tbl ORDER BY Match_history_ID DESC LIMIT 10";
     $gameResults = mysqli_query($conn, $queryGetGameResults);
 ?>
 
