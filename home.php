@@ -109,7 +109,7 @@
       <input type="radio" name="opponent" value="ai"> AI
     </label>
     <button type="button" id="okButton" onclick="okGame()">Done</button>
-    <h5 style="text-align: center; margin-top: 20px;">MECHANICS:<br>Players take turns putting their marks in empty squares.<br>The first player to get 3 of her marks in a row<br>(up, down, across, or diagonally) is the winner.</h5>
+    <h5 style="text-align: center; margin-top: 20px;">MECHANICS:<br>Players take turns putting their marks in empty squares.<br>The first player to get 3 marks in a row<br>(up, down, across, or diagonally) is the winner.</h5>
   </form>
 
     <!-- SELECT COMPTUTER AI DIFFICULTY  -->
