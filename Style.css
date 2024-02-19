@@ -292,7 +292,7 @@ form {
     padding: 12px;
     border-radius: 10px;
     border-bottom: 2px solid #d1495b; 
-    background-color: transparent;
+    background-color: #FFFFFF;
     transition: border-bottom-color 0.3s, color 0.3s; 
     color: #000; 
     font-size: 16px;
