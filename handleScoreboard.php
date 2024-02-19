@@ -1,3 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Form</title>
+</head>
+<body>
+    <h1>Sample Form</h1>
+</body>
+</html>
+
+<!--AJAX DATA HANDLING-->
 <?php
     session_start();
     require_once "database.php"; // Include your database connection script
@@ -48,15 +61,3 @@
     // mysqli_close($conn);
     echo "Hello WORLD";
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample Form</title>
-</head>
-<body>
-    <h1>Sample Form</h1>
-</body>
-</html>
