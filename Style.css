@@ -146,11 +146,11 @@ form {
 #okButton {
     margin-top: 10px;
     width: fit-content;
-    border: 1px solid #d1495b;
+    border: 1px solid #00798C;
     padding: 10px 20px;
     border-radius: 50px;
     text-decoration: none;
-    color: #d1495b;
+    color: #00798C;
     transition: background-color 0.5s, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
