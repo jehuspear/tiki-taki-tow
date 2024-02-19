@@ -264,26 +264,25 @@ form {
 
   }
 
-  #resetB{
+  #resetB {
     margin-left: 25px;
     margin-top: 10px;
     width: fit-content;
-    border: 1px solid #D1495B;
+    border: 1px solid #00798C;
     padding: 10px 20px;
     border-radius: 50px;
     text-decoration: none;
-    color: #D1495B;
+    color: #00798C;
     transition: background-color 0.5s, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  }
+}
 
-  #resetB:hover {
-    background: #D1495B;
+#resetB:hover {
+    background: #00798C;
     color: #fefae0;
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     animation: pulsate 0.5s ease-in-out infinite alternate; 
-
-  }
+}
 
 .form-group {
     position: relative;
