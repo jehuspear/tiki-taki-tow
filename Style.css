@@ -288,6 +288,7 @@ form {
 .form-group {
     position: relative;
     margin-bottom: 25px;
+    border-radius: 50%;
 }
 
 .form-control {
