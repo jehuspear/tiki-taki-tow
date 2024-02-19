@@ -126,6 +126,7 @@ form {
     align-items: center;
     margin-top: 20px;
     animation: slideIn 1s ease-in-out;
+    border-radius: 50%;
 }
 
 @keyframes slideIn {
