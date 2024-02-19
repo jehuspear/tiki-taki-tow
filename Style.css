@@ -17,7 +17,7 @@
 }
 
 body {
-     background: url('path_to_your_video_file.mp4') no-repeat;
+    background: url('path_to_your_video_file.mp4') no-repeat;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -30,6 +30,8 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
+    position: relative; /* Ensure proper z-index stacking */
+    z-index: -1; /* Place the background behind other content */
 }
 .image-container {
     display: block;
