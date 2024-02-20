@@ -37,6 +37,7 @@ function music() {
 
     if (isMusicOn) {
         musicElement.innerHTML = "Music On";
+        document.getElementById("bg").loop = true;
         bg.play();
     } else {
         musicElement.innerHTML = "Music Off";
