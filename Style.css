@@ -117,7 +117,7 @@ td:hover {
     background-color: #00798c;
     transform: scale(1.1);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    filter: brightness(1.2); /* Add brightness on hover */
+    filter: brightness(1.2);
 }
 
 form {
