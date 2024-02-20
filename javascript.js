@@ -26,6 +26,7 @@ var opponentplace = new Audio('music/opponent_place.mp3');
 var lose = new Audio('music/lose.mp3');
 var bg = new Audio('music/background.mp3')
 bg.volume = 0.2;
+bg.loop = true;
 
 hideBoard();
 
