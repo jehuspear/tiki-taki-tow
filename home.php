@@ -46,9 +46,6 @@
 <body>
   <!-- Your existing HTML content -->
 
-  <!-- Add a button or trigger to initiate the redirection -->
-  <button onclick="redirectToAnotherTab()">Redirect to Another Tab</button>
-
   <!-- Add more content as needed -->
 </body>
 </html>
