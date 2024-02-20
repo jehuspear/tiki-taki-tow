@@ -37,10 +37,10 @@ function music() {
     isMusicOn = !isMusicOn;
 
     if (isMusicOn) {
-        musicElement.innerHTML = "Music On";
+        musicElement.innerHTML = "Music Off";
         bg.play();
     } else {
-        musicElement.innerHTML = "Music Off";
+        musicElement.innerHTML = "Music On";
         bg.pause();
     }
 }
