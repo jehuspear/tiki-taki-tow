@@ -95,7 +95,7 @@
                         Hello, <?php echo $userName?>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" id="music" onclick="music()">Music Off</a></li>
+                            <li><a class="dropdown-item" id="music" onclick="music()">Music On</a></li>
                             <li><a class="dropdown-item" href="logout.php">LOG OUT</a></li>
                         </ul>
                     </li>
