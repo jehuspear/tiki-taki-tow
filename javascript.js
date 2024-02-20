@@ -730,7 +730,7 @@ function goHome() {
 
   document.getElementById("backAi").style.display = "none";
   document.getElementById("resetB").style.display = "none";
-  document.getElementById("group").style.display = "flex";
+  document.getElementById("group").style.display = "inline-block";
   document.getElementById("back").style.display = "none";
   document.getElementById("playerTurn").style.display = "none";
 
