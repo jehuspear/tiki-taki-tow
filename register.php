@@ -29,7 +29,7 @@
 </div>
 </a>
 
-    <div class="container" style="width: 25vw;">
+    <div class="container">
     <?php
     
         if (isset($_POST["submit"])) {
