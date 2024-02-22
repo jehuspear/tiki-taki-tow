@@ -376,7 +376,7 @@ nav .fas{
     display: none;
 }
 
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 100px){
     .container {
         width: 80%;
     }
