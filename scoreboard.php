@@ -27,7 +27,7 @@
     }
 
     // Retrieve game results from the database, limiting to 10 rows and sorting by datetime in descending order
-    $queryGetGameResults = "SELECT * FROM tiki_taki_tow_db.scoreboard_ai_tbl ORDER BY Match_history_ID DESC LIMIT 10";
+    $queryGetGameResults = "SELECT * FROM tiki_taki_tow_db.scoreboard_ai_tbl ORDER BY match_history_ID DESC LIMIT 10";
     $gameResults = mysqli_query($conn, $queryGetGameResults);
 ?>
 
@@ -53,21 +53,28 @@
 
   <!-- INTERNAL CSS -->
   <style>
-    table {
-      width: 90%;
-      margin-bottom: 30px;
-      position: relative;
-    }
+  table {
+    width: 95%;
+    margin-bottom: 30px;
+  }
+  th, td {
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    font-size: 1.5vh;
+    height: 50px;
+    /* Width set to a fixed value, adjust as needed */
+    width: 150px;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
     th, td {
-        /* padding: 2px; */
-        text-align: center;
-        border-bottom: 1px solid #ddd;
-        font-size: 2vh;
-        width: 100px;
-        height: 40px;
-       
+      /* Change width to auto for smaller screens */
+      width: auto;
+      /* Decrease font size for better readability on smaller screens */
+      font-size: 1.1vh;
     }
-  
+  }
 </style>
 
   <title>Tiki Taki Tow</title>
@@ -90,15 +97,15 @@
         <div class="container-fluid">
             
             <!-- Player/Guest Button -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler ms-auto" style="background: #f0ebd8; color: #f0ebd8; " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" style="color: #f0ebd8;"></span>
             </button>
             
             <div class="collapse navbar-collapse" id="navbarNav" >
                 <ul class="navbar-nav ms-auto" >
                 
-                    <li class="nav-item dropdown" >
-                        <a class="nav-link dropdown-toggle" style="color: #f0ebd8; font-size:30px;" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <li class="nav-item dropdown  ms-auto" >
+                        <a class="nav-link dropdown-toggle" style="color: #f0ebd8; font-size:20px;" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Hello, <?php echo $userName?>
                         </a>
                         <ul class="dropdown-menu">
@@ -120,15 +127,15 @@
     <img src="images/TTTLogo.png" id="logo" draggable="false">
 </div> -->
 
-<!-- SHOW SCOREBOARD HERE -->
+<!-- THE TABLE THAT SHOWS THE SCOREBOARD HERE -->
 
-<h2 style="position: relative; margin-top: 5%;">SCOREBOARD:</h2>
+<h2 style="position: relative;">SCOREBOARD:</h2>
 
 
-    <table>
+    <table class="">
       <thead>
         <tr>
-          <th>Newest - Oldest</th>
+          <th>Newest-Oldest</th>
           <th>Date and Time</th>
           <th>Player Name</th>
           <th>Opponent Name</th>
