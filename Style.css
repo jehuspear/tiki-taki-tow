@@ -370,3 +370,94 @@ form {
     text-align: center; /* Optional: Center the text */
     z-index: 999; /* Optional: Ensure it's on top of other elements */
 }
+
+/*-------------------Responsiveness----------------*/
+nav .fas{
+    display: none;
+}
+
+@media only screen and (max-width: 600px){
+    .mechanics-section h5{
+        color: #003d5b;
+        font-size: 15px;
+    }
+    #mechanics-section {
+        color: #003d5b;
+        font-size: 15px;
+    }
+    #group {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #30638e;
+        padding: 4px; /* Optional: Add some padding */
+        width: 100%; /* Optional: Set width to full */
+        text-align: center; /* Optional: Center the text */
+        z-index: 999; /* Optional: Ensure it's on top of other elements */
+    }
+    
+    .image-container {
+        display: block;
+        margin: 1px auto 70px;
+        width: 70%;
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    video {
+        display: none;
+      }
+
+      #startButton,
+      .strtbtn,
+      #okButton {
+          margin-top: 10px;
+          width: fit-content;
+          border: 1px solid #00798C;
+          padding: 10px 10px;
+          border-radius: 50px;
+          text-decoration: none;
+          color: #00798C;
+          transition: background-color 0.5s, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      }
+
+      #back {
+        margin-top: 10px;
+        width: fit-content;
+        border: 1px solid #D1495B;
+        padding: 5px 20px;
+        border-radius: 50px;
+        text-decoration: none;
+        color: #D1495B;
+        transition: background-color 0.5s, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    #backAi{
+        margin-top: 10px;
+        width: fit-content;
+        border: 1px solid #D1495B;
+        padding: 5px 20px;
+        border-radius: 50px;
+        text-decoration: none;
+        color: #D1495B;
+        transition: background-color 0.5s, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      }
+
+      #resetB {
+        margin-top: 10px;
+        width: fit-content;
+        border: 1px solid #00798C;
+        padding: 5px 20px;
+        border-radius: 50px;
+        text-decoration: none;
+        color: #00798C;
+        transition: background-color 0.5s, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      }
+
+      .navbar-toggler-icon {
+        color: #fdf0d5 ;
+    }
+}
