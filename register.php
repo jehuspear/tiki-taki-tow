@@ -98,24 +98,28 @@
             <!-- LASTNAME -->
             <div class="form-group mb-3">
                  <label for = "email"> Enter your Last name: </label><p></p><p></p><p></p>
-                <input type="text" class="form-control" name="LastName" placeholder="Enter your Last Name: " >
+                <input type="text" class="form-control" name="LastName" placeholder="" >
             </div>
             <!-- FIRSTNAME -->
             <div class="form-group mb-3">
-                <input type="text" class="form-control" name="FirstName" placeholder="Enter your First Name: " >
+                 <label for = "email"> Enter your First Name: </label><p></p><p></p><p></p>
+                <input type="text" class="form-control" name="FirstName" placeholder="" >
             </div>
             <!-- EMAIL -->
             <div class="form-group mb-3">
-                <input type="text" class="form-control" name="Username" placeholder="Enter your Username: " >
+                 <label for = "email"> Enter your Username: </label><p></p><p></p><p></p>
+                <input type="text" class="form-control" name="Username" placeholder="" >
             </div>
             <!-- PASSWORD -->
             <div class="form-group mb-3">
-                <input type="password" id="password" class="form-control" name="password" placeholder="Enter your Password: " >
+                  <label for = "password"> Enter your Password: </label><p></p><p></p><p></p>
+                <input type="password" id="password" class="form-control" name="password" placeholder="" >
                 <!-- <i class="bi bi-eye-slash" id="togglePassword"></i> -->
             </div>
             <!-- RE-ENTER PASSWORD -->
             <div class="form-group mb-3">
-                <input type="password" class="form-control" name="repeat_password" placeholder="Re-Enter Password: " >
+                  <label for = "password"> Re-Enter Password: </label><p></p><p></p><p></p>
+                <input type="password" class="form-control" name="repeat_password" placeholder="" >
             </div>
 
             <!-- SUBMIT BUTTON -->
