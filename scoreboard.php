@@ -54,16 +54,17 @@
   <!-- INTERNAL CSS -->
   <style>
   table {
-    width: 95%;
-    margin-bottom: 30px;
+    width: 100%;
+    border-collapse: collapse; /* Add this to collapse borders and prevent double borders */
   }
   th, td {
     text-align: center;
     border-bottom: 1px solid #ddd;
-    font-size: 1.5vh;
+    font-size: 20px;
     height: 50px;
     /* Width set to a fixed value, adjust as needed */
     width: 150px;
+    margin: auto;
   }
 
   /* Responsive adjustments */
@@ -72,9 +73,29 @@
       /* Change width to auto for smaller screens */
       width: auto;
       /* Decrease font size for better readability on smaller screens */
-      font-size: 1.1vh;
+      font-size: 2.65vw;
     }
   }
+
+  /* Sticky Table Header */
+  .header{
+        position:sticky;
+        top: 0 ;
+    }
+
+  /* For Footer */
+  #footer {
+    position: relative;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #30638e;
+    padding: 4px; /* Optional: Add some padding */
+    width: 100%; /* Optional: Set width to full */
+    text-align: center; /* Optional: Center the text */
+    z-index: 999; /* Optional: Ensure it's on top of other elements */
+}
+
 </style>
 
   <title>Tiki Taki Tow</title>
@@ -123,17 +144,16 @@
 <br><br><br><br>
 
 <!-- LOGO PIC -->
-<!-- <div class="image-container" onclick="location.reload()" title="Homepage" style="cursor:pointer" draggable="false">
-    <img src="images/TTTLogo.png" id="logo" draggable="false">
+<!-- <div class="image-container" onclick="location.reload()" title="Homepage" style="cursor:pointer;" draggable="false">
+    <img src="images/TTTLogo.png"  draggable="false">
 </div> -->
 
-<!-- THE TABLE THAT SHOWS THE SCOREBOARD HERE -->
 
 <h2 style="position: relative;">SCOREBOARD:</h2>
-
-
-    <table class="">
-      <thead>
+<!-- THE TABLE THAT SHOWS THE SCOREBOARD HERE -->
+<div class="table-responsive">
+    <table>
+      <thead >
         <tr>
           <th>Newest-Oldest</th>
           <th>Date and Time</th>
@@ -164,15 +184,15 @@
         ?>
       </tbody>
     </table>
-
+    </div>
 
 <!-- BACK BUTTON -->
-<div class="d-flex justify-content-center"><a href="home.php" class="btn" id="back">Back</a> </div>
+<div class="d-flex justify-content-center" style="text-align: center; margin-top: 20px;"><a href="home.php" class="btn" id="back">Back</a> </div>
 
     <!-- Footer -->
     <footer class="text-center">
     <div class="container">
-      <h6 style="text-align: center; margin-top: 30px;" id="group">&copy ALL RIGHTS RESERVED<br>GROUP HALATA</h6>
+      <h6 style="text-align: center; margin-top: 30px;" id="footer">&copy ALL RIGHTS RESERVED<br>GROUP HALATA</h6>
     </div>
   </footer>
   <!-- End of Footer -->

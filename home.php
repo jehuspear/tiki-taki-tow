@@ -77,25 +77,25 @@
 
               <!-- VIEW SCOREBOARD BUTTON -->
             <div class="text-left" style="padding: 10px; margin-bottom: 10px;">
-                  <a class="btn strtbtn" href="scoreboard.php" target="_self" style="color: #f0ebd8; font-size:30px;" >
+                  <a class="btn strtbtn" href="scoreboard.php" target="_blank" style="color: #f0ebd8; font-size:20px;" >
                   View Scoreboard
                   </a>
             </div>   
             
             <!-- Player/Guest Button -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler ms-auto" style="background: #f0ebd8; color: #f0ebd8; " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             
             <div class="collapse navbar-collapse" id="navbarNav" >
                 <ul class="navbar-nav ms-auto" >
                 
-                    <li class="nav-item dropdown" >
-                        <a class="nav-link dropdown-toggle" style="color: #f0ebd8; font-size:30px;" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <li class="nav-item dropdown ms-auto" >
+                        <a class="nav-link dropdown-toggle" style="color: #f0ebd8; font-size:20px;" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Hello, <?php echo $userName?>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" id="music" onclick="music()">Music On</a></li>
+                            <li><a class="dropdown-item" id="music" onclick="music()">Music Off</a></li>
                             <li><a class="dropdown-item" href="logout.php">LOG OUT</a></li>
                         </ul>
                     </li>
@@ -104,7 +104,6 @@
         </div>
     </nav>
 <!-- END OF NAV BAR -->
-
 
 <br><br><br><br>
 
