@@ -45,7 +45,7 @@
 
 <!-- LOG IN BUTTON -->
   <a href="login.php" style="text-decoration: none;">
-    <button class="strtbtn" style="margin-right: 30px; width: 200px;">Log In</button>
+    <button class="strtbtn" style="width: 200px;">Log In</button>
   </a>
 
 <!-- Create an account BUTTON -->
