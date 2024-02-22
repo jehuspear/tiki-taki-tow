@@ -306,7 +306,7 @@ form {
     position: absolute;
     top: 0;
     left: 0;
-    font-size: 16px;
+    font-size: 2vh;
     color: #d1495b; 
     pointer-events: none;
     transition: top 0.3s, font-size 0.3s, color 0.3s;
@@ -315,7 +315,7 @@ form {
 .form-control:focus + label,
 .form-control:not(:placeholder-shown) + label {
     top: -25px;
-    font-size: 14px;
+    font-size: 1.8vh;
         color: #00798C; 
 }
 
