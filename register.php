@@ -97,6 +97,7 @@
         <form action="register.php" method="post">
             <!-- LASTNAME -->
             <div class="form-group mb-3">
+                 <label for = "email"> Enter your Last name: </label><p></p><p></p><p></p>
                 <input type="text" class="form-control" name="LastName" placeholder="Enter your Last Name: " >
             </div>
             <!-- FIRSTNAME -->
