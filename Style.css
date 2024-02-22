@@ -418,7 +418,7 @@ nav .fas{
 
     .form-group {
         margin-bottom: 15px;
-        visibility: collapse;
+        visibility: visible;
     }
 
     .form-control {
