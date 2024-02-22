@@ -91,6 +91,8 @@
                 }
        }         
     ?>
+
+        <div class="form-container">
         <!-- FORM PAGE -->
         <form action="register.php" method="post">
             <!-- LASTNAME -->
