@@ -16,9 +16,10 @@
     }
 }
 
+@media only screen and (max-width: 600px) {
 body {
     background: url('path_to_your_video_file.mp4') no-repeat;
-    background-size: cover;
+    background-size: auto;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -31,6 +32,10 @@ body {
     height: 100vh;
     margin: 0;
 }
+
+.container {
+        width: 80%; 
+    }
 
 /* VIDEO BACKGROUND */
 /* Set video to fill the entire viewport */
@@ -45,7 +50,7 @@ video {
 .image-container {
     display: block;
     margin: 1px auto 70px;
-    width: 30%;
+    width: 80%;
     cursor: pointer;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
     border-radius: 10px;
