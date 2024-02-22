@@ -377,6 +377,9 @@ nav .fas{
 }
 
 @media only screen and (max-width: 600px){
+    .container {
+        width: 80%;
+    }
     .mechanics-section h5{
         color: #003d5b;
         font-size: 15px;
@@ -400,7 +403,7 @@ nav .fas{
     .image-container {
         display: block;
         margin: 1px auto 70px;
-        width: 70%;
+        width: 100%;
         cursor: pointer;
         transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
         border-radius: 10px;
@@ -409,7 +412,21 @@ nav .fas{
 
     video {
         display: none;
+        width: 100%;
+        height: auto;
       }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-control {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 8px 15px;
+    }
 
       #startButton,
       .strtbtn,
