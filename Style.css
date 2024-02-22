@@ -418,10 +418,14 @@ nav .fas{
 
     .form-group {
         margin-bottom: 15px;
+        width: 90%;
+        height: 90%;
     }
 
     .form-control {
-        font-size: 10px;
+        font-size: 14px;
+        width: 90%;
+        height: 90%;
     }
 
     .btn {
